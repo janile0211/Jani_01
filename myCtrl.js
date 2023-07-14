@@ -22,8 +22,28 @@ app.config(function ($routeProvider) {
             templateUrl: "05_Contact.html",
             controller: "myCtrl"
         })
+        .when("/07_Position_of_Dealer", {
+            templateUrl: "07_Position_of_Dealer.html",
+            controller: "myCtrl"
+        })
         .when("/04_Payment", {
             templateUrl: "04_Payment.html",
+            controller: "myCtrl"
+        })
+        .when("/04_1_Payment_honda", {
+            templateUrl: "04_1_Payment_honda.html",
+            controller: "myCtrl"
+        })
+        .when("/04_2_Payment_suzuki", {
+            templateUrl: "04_2_Payment_suzuki.html",
+            controller: "myCtrl"
+        })
+        .when("/04_3_Payment_toyota", {
+            templateUrl: "04_3_Payment_toyota.html",
+            controller: "myCtrl"
+        })
+        .when("/06_sign_to_drive", {
+            templateUrl: "06_sign_to_drive.html",
             controller: "myCtrl"
         })
         ;
@@ -72,7 +92,8 @@ app.controller('myCtrl', function ($scope, $http, $window, $location) {
    // Compare car
    $scope.item1 = function(a) {
     var select2 = $scope.selectedOption2;
-    if (a != select2) {
+    if (a != select2) 
+    {
         $scope.Image1 = $scope.database[a].Image;
         $scope.brand1 = $scope.database[a].Brand;
         $scope.Design1 = $scope.database[a].Design;
@@ -97,7 +118,8 @@ app.controller('myCtrl', function ($scope, $http, $window, $location) {
     $scope.selectedCar1 = $scope.database[a];
 };
 
-$scope.item2 = function(a) {
+$scope.item2 = function(a) 
+{
     var select1 = $scope.selectedOption1;
     if (a != select1) {
         $scope.Image2 = $scope.database[a].Image;
@@ -106,8 +128,10 @@ $scope.item2 = function(a) {
         $scope.year2 = $scope.database[a].Year;
         $scope.area2 = $scope.database[a].Area;
         $scope.color2 = $scope.database[a].Color;
+        $scope.Seatingcapacity2 = $scope.database[a].Seatingcapacity;
         $scope.price2 = $scope.database[a].Price;
-    } else {
+    } else 
+    {
         $scope.selectedOption2 = 0;
         $scope.Image2 = $scope.database[0].Image;
         $scope.brand2 = $scope.database[0].Brand;
@@ -119,5 +143,19 @@ $scope.item2 = function(a) {
         $scope.price2 = $scope.database[0].Price;
     }
     $scope.selectedCar2 = $scope.database[a];
+};
+//sign in form
+$scope.display = function() {
+    var sName = $scope.txtName;
+    var sEmail = $scope.txtEmail;
+    var sPhone = $scope.txtPhone;
+    var message = [];
+    message.push("Your Information");
+    message.push("----------------------");
+    message.push("Name: " + sName);
+    message.push("Email: " + sEmail);
+    message.push("Phone: " + sPhone);
+    alert(message.join("\n"));
+    return false; // Ngăn form submit
 };
 });
