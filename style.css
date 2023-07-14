@@ -18,8 +18,8 @@
     }
     .topnav 
     {
-        overflow: hidden;
-        border-top: 2px double orange ;
+        
+        border-bottom: 2px double orange ;
     }
 
     .topnav a 
@@ -69,7 +69,8 @@
     }
     @media (max-width: 600px) 
     {
-      .carousel-caption {
+      .carousel-caption 
+      {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
       }
     }
@@ -135,15 +136,7 @@
       filter: grayscale(100%);
     }  
     
-    .open .dropdown-toggle 
-    {
-      color: #fff;
-      background-color: #555 !important;
-    }
-    .dropdown-menu li a 
-    {
-      color: #000 !important;
-    }
+    
     .dropdown-menu li a:hover 
     {
       background-color: red !important;
