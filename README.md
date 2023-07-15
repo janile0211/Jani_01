@@ -12,6 +12,6 @@
 =======================================
 Documentations : https://github.com/janile0211/eProject-Sem01_T5.2303.E0_AutoWorld_Group01/tree/main/Document
 =======================================
-Published website : https://github.com/janile0211/eProject-Sem01_T5.2303.E0_AutoWorld_Group01
+Published website : https://janile0211.github.io/eProject-Sem01_T5.2303.E0_AutoWorld_Group01
 =======================================
 Thank you for visit our website.
